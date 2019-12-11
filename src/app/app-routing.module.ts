@@ -4,30 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
   {
-    path: 'recipes',
-    children: [
-      {
-        path: '',
-        loadChildren: './recipes/recipes.module#RecipesPageModule'
-      },
-      {
-        path: ':recipeId',
-        loadChildren:
-          './recipes/recipe-detail/recipe-detail.module#RecipeDetailPageModule'
-      }
-    ]
-  },
-  {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthPageModule)
-  },
-  {
-    path: 'places',
-    loadChildren: () => import('./places/places.module').then( m => m.PlacesPageModule)
-  },
-  {
-    path: 'bookings',
-    loadChildren: () => import('./bookings/bookings.module').then( m => m.BookingsPageModule)
   }
 ];
 
