@@ -11,22 +11,28 @@ export class PlacesService {
       'p1',
       'Manhattan Mansion',
       'In the heart of New York City.',
-      'https://images.axios.com/bV8riMeQB6VG9t4UZw5_poC83oc=/0x177:5487x3263/1920x1080/2018/04/17/1523996370270.jpg',
-      149.99
+      'https://lonelyplanetimages.imgix.net/mastheads/GettyImages-538096543_medium.jpg?sharp=10&vib=20&w=1200',
+      149.99,
+      new Date('2019-01-01'),
+      new Date('2019-12-31')
     ),
     new Place(
       'p2',
       "L'Amour Toujours",
       'A romantic place in Paris!',
-      'https://thenypost.files.wordpress.com/2018/09/180905-alex-jones-facebook-twitter-feature.jpg?quality=90&strip=all&w=1200',
-      189.99
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Paris_Night.jpg/1024px-Paris_Night.jpg',
+      189.99,
+      new Date('2019-01-01'),
+      new Date('2019-12-31')
     ),
     new Place(
       'p3',
       'The Foggy Palace',
       'Not your average city trip!',
-      'https://thenypost.files.wordpress.com/2018/08/tech_companies_free_speech.jpg?quality=90&strip=all&w=1200',
-      99.99
+      'https://upload.wikimedia.org/wikipedia/commons/0/01/San_Francisco_with_two_bridges_and_the_fog.jpg',
+      99.99,
+      new Date('2019-01-01'),
+      new Date('2019-12-31')
     )
   ];
 
@@ -37,6 +43,6 @@ export class PlacesService {
   constructor() {}
 
   getPlace(id: string) {
-    return {...this._places.find(p => p.id === id)};
+    return { ...this._places.find(p => p.id === id) };
   }
 }
